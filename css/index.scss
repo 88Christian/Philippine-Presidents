@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "MonotypeOldEnglish";
+  src: url("../fonts/OLD.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+$primary-color: #000;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "MonotypeOldEnglish";
+  background-image: linear-gradient(
+      rgb(255, 255, 255, 0.4),
+      rgb(255, 255, 255, 0.4)
+    ),
+    url("../images/main-background-2.jpg");
+
+  background-position: center;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  .main-header {
+    .nav-main {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 50px 0;
+      margin: 0 20px;
+
+      .nav-logo {
+        text-align: center;
+        width: 600px;
+
+        h1 {
+          font-size: 4rem;
+          color: $primary-color;
+          border-top: 10px solid #000;
+          border-bottom: 10px solid #000;
+          transition: 0.3s ease;
+        }
+        h1:hover {
+          color: red;
+          transition: 0.3s ease;
+        }
+      }
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+
+        li {
+          margin-left: 50px;
+          font-size: 2rem;
+          font-weight: bold;
+
+          a {
+            color: $primary-color;
+          }
+          a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #000;
+            transform: scale(0, 1);
+            transition: transform 200ms ease-in;
+            transform-origin: left;
+          }
+          a:hover::after {
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+  .margin-line {
+    height: 20px;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: #fff;
+      margin: 0 10px;
+    }
+  }
+  .showcase {
+    padding: 50px;
+    .row {
+      p {
+        font-size: 20px;
+        font-family: "roboto", sans-serif;
+      }
+
+      .col {
+        margin-top: 20px;
+      }
+    }
+  }
+  footer {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
